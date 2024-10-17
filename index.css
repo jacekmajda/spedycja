@@ -1,0 +1,314 @@
+:root {
+  --clr-black: 0 0% 20%;
+  --clr-white: 0 0% 100%;
+ 
+ --ff-sans-body: 'Inter', sans-serif;
+ --container-padding: 10px
+}
+
+.flex {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.navigation-menu li {
+    margin: 0 auto 10px auto;
+    text-align: end;
+}
+.container {
+    position: relative;
+    max-width: 1048px;
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+   justify-content: space-between;
+   padding: 1rem 0;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 800;
+    color: hsl(var(--clr-black));
+}
+
+.navigation-menu li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0 20px 0 0;
+    list-style: none;
+}
+.navigation-menu a {
+  color: hsl(var(--clr-black));
+}
+
+a.button {
+    background-color: hsl(var(--clr-black));
+    color: hsl(var(--clr-white));
+    border-radius: 4px;
+    line-height: 20px;
+    padding: 8px 10px;
+}
+.button:hover {
+    opacity: 0.8;
+}
+
+/* hero */
+.hero {
+    max-width: 1024px;
+    margin: 30px auto 0 auto;
+    flex-direction: column-reverse;
+    align-items:center;
+}
+
+.hero .img {
+    position: relative;
+}
+.hero-section{
+    z-index: 2;
+    flex-direction: column;
+    align-items: flex-end;
+}
+h1 {
+    font-size: 50px;
+    line-height: 1;
+}
+.hero-section p {
+    font-size: 24px;
+    color: #6B6969;
+}
+.hero-section .button {
+    font-size: 22px;
+    padding: 20px 40px;
+    margin-top: 40px;
+}
+ /* ABOUT US SECTION */
+ .meet-section {
+    margin-top: 40px;
+ }
+ aside h2 {
+    font-size: 40px;
+ }
+ aside p {
+    font-size: 20px;
+ }
+ aside .button {
+    align-self: flex-start;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 60px;
+    border-radius: 8px;
+    line-height: 30px;
+    padding: 20px 40px;
+    margin-bottom: 50px;
+ }
+ /* projects section */
+ .wrapper {
+    background-color: #FAFAFA;
+ }
+ .project {
+    align-items:start;
+    padding: 10px 0;
+ }
+ .project:nth-child(2n) {
+    flex-direction: column-reverse;
+ }
+ .project-section h2 {
+    font-size: 40px;
+ }
+ .project .project-data h3 {
+    font-weight: 600;
+    font-size: 30px;
+ }
+ .project .project-data p {
+    font-size: 20px;
+    margin-top: 10px;
+ }
+
+ /* talk & contact */
+ footer.container {
+    background-color: #333333;
+ }
+ .talk-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    flex-direction: column-reverse;
+ }
+  .mj{
+    width: 111px;
+ }
+ .talk-section h2 {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+ }
+ .talk-section p {
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #fff;
+ }
+
+ .contact-data a {
+    margin: 5px 0;
+    color: hsl(var(--clr-white));
+    font-weight: 700;
+    font-size: 24px;
+ }
+
+span {
+    font-weight: 400;
+}
+
+p.reserved {
+    color: hsl(var(--clr-white));
+    text-align: center;
+}
+ 
+ 
+/* ----------- */
+/* Reset       */
+/* ----------- */
+ 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ 
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+ 
+/* Box sizing */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+ 
+html,
+body {
+  overflow-x: hidden;
+}
+ 
+/* Set core root defaults */
+html, html:focus-within {
+  scroll-behavior: smooth;
+}
+ 
+/* Set core body defaults */
+body {
+  height: 100%;
+  font-family: var(--ff-sans-body);
+  text-align: justify;
+  color: hsl(var(--clr-black));
+  background-color: hsl(var(--clr-white));
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+ 
+  display: block;
+}
+ 
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a {
+  text-decoration: none;
+}
+ 
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+ 
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+ 
+button {
+  border: 0;
+}
+ 
+
+@media (min-width: 1000px) {
+    .flex {
+        flex-direction: row;
+    }
+    .navigation-menu {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .hero{
+        flex-direction: row;
+    }
+    .hero-section{
+        flex-direction: column;
+    }
+    aside.flex {
+        flex-direction: column;
+    }
+    .project:nth-child(2n) {
+        flex-direction: row;
+     }
+     .project-section {
+        flex-direction: column;
+     }
+     .talk-section .img, .contact-data{
+        flex-direction: column;
+     }
+    footer.container {
+        max-width: 1640px;
+    }
+    .talk-section {
+        align-items: flex-start;
+        justify-content: center;
+    }
+    div.img {
+        align-items: flex-start;
+    }
+    div.img img {
+        margin: 0;
+        max-width: 330px;
+    }
+    .talk-section .env {
+        width: 444px;
+    }
+    .mj {
+        width: 111px;
+        padding-bottom: 40px;
+    }
+}
